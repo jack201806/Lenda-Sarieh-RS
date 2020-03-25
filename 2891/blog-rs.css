@@ -1,0 +1,15 @@
+#footer{
+    height: 120px;
+    /* width: 100%; */
+    width: 1900px;
+    margin-top: 740px;
+    position: absolute;
+    background-color: limegreen;
+    /* font-weight: bolder; */ 
+    font-size: larger;
+    color: aliceblue;
+    text-align: center;
+    vertical-align: middle;
+	/* position: fixed; */
+	/* bottom: 0; */
+}
