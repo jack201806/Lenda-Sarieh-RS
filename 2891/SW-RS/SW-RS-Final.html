@@ -1,0 +1,2742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020.06.29c1</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0 auto;
+            /*必须加，否则网页不居中*/
+            font-family: "Roboto Condensed", 等线, Arial Unicode MS, Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            width: 100%;
+            background: linear-gradient(#fff, #80ff00);
+            /*使得大div下方区域的背景颜色也为#80ff00*/
+        }
+        
+        .body {
+            width: 100%;
+            /*父、子元素皆设置width: 100%*/
+            /* margin: 0 auto; */
+            background: linear-gradient(#fff, #80ff00);
+            /*线性渐变,就在大div的背景颜色*/
+            /* padding: 10px; */
+        }
+        
+        table {
+            /* width: 100%; */
+            /* margin: 10px; */
+            padding: 10px;
+        }
+        /*align: center;的意思，就是table相对于浏览器居中*/
+        
+        td {
+            /* border: 5px solid transparent; */
+            background-color: aliceblue;
+            color: #008;
+            margin: 0px;
+            text-align: center;
+            padding: 10px;
+            /* width: 60dp; */
+            /* min-width: 120dp; */
+        }
+        
+        .num {
+            /*num*/
+            width: 54pt
+        }
+        
+        .zh_CN {
+            width: 73pt;
+        }
+        
+        .p1033 {
+            /*Lenda Yung-English*/
+            width: 95pt;
+        }
+        
+        .p289100 {
+            /*RS-RC1*/
+            width: 94pt;
+        }
+        
+        .p289101 {
+            /*RS-U*/
+            width: 94pt;
+        }
+        
+        .p289110 {
+            /*RS-R&H*/
+            width: 94pt;
+        }
+        
+        .p289111 {
+            /*RS-S1C*/
+            width: 94pt;
+        }
+        
+        .attr {
+            width: 89;
+            width: 67pt;
+        }
+        
+        .desc {
+            width: 148pt;
+            overflow: auto;
+        }
+        
+        #num {
+            background-color: aqua;
+            color: yellow;
+        }
+        
+        #zh_CN {
+            /* border: 5px 5px 0 5px; */
+            background-color: #f00;
+            color: #fff;
+        }
+        
+        #attr {
+            background-color: #808;
+            color: #fff;
+        }
+        
+        #desc {
+            /* border: 5px 5px 5px 0; */
+            background-color: #008;
+            color: #fff;
+            /* max-width: 40dp; */
+        }
+        /* .others {
+            border: 5px 5px 5px 5px;
+        } */
+        
+        #p1033 {
+            background-color: #0f0;
+            color: #fff;
+        }
+        
+        #rs {
+            color: #f0f;
+        }
+        
+        #p2891 {
+            background-color: #ff0;
+            color: #0ff;
+        }
+        
+        #p289100 {
+            background-color: #defabc;
+            color: #80c0ff;
+        }
+        
+        #p289101 {
+            background-color: #ffd966;
+            color: #f0f;
+        }
+        
+        #p289110 {
+            background-color: #fabcde;
+            color: #c0ff80;
+        }
+        
+        #p289111 {
+            background-color: #bcdefa;
+            color: #ff80c0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body">
+        <table cellspacing="3px">
+            <caption>
+                <!--href=""意味着刷新页面-->
+                <!--href="#"意味着（1）防止页面刷新（2）跳转到页面顶部-->
+                <a href="https://www.cnblogs.com/lendasarieh-rs/" target="_self">
+                    <img src="images/SW-RS_横_透明.png" alt="RS Logo" width="600px">
+                </a>
+            </caption>
+            <tr>
+            </tr>
+            <tr class="title" id="title">
+                <td class="num" id="num" rowspan="2">序号</td>
+                <td class='zh_CN' id='zh_CN' rowspan="2">中文</td>
+                <td class='others p1033' id='p1033' rowspan="2">English</td>
+                <td class='others rs' id='p2891' colspan="4">Lenda Sarieh(RS), 2891</td>
+                <td class='attr' id='attr' rowspan="2">词性</td>
+                <td class='desc' id='desc' width="240dp" rowspan="2">注释</td>
+                <!--在这里规定宽度才有效-->
+            </tr>
+            <tr class="title_02">
+                <td class="others rs p289100" id="p289100">RS-RC1</td>
+                <td class="others rs p289101" id="p289101">RS-U</td>
+                <td class="others rs p289110" id="p289110">RS-R&H</td>
+                <td class="others rs p289111" id="p289111">RS-S1C</td>
+            </tr>
+            <!-- <tr class="swadesh w-001" id="sw_words_01">
+                <td class='num'>1</td>
+                <td class=''zh_CN''>我</td>
+                <td class='others p1033'>I</td>
+                <td class="others rs p289100">A(1)</td>
+                <td class="others rs p289101">Aramona</td>
+                <td class="others rs p289110">Aramona</td>
+                <td class="others rs p289111">0122(1)</td>
+                <td class='attr'>词性</td>
+                <td class='desc'>RS原有词汇，以前仅限于宾格，现在主宾格都是这个，绝大多数场合都用Aramona指代“我”</td>
+            </tr> -->
+            <tr height=84 style='height:63.0pt'>
+                <td rowspan=2 height=126 class='num'>1</td>
+                <td rowspan=2 class='zh_CN'>我</td>
+                <td rowspan=2 class='others p1033'>I</td>
+                <td class='others rs p289100'>Aramona</td>
+                <td class='others rs p289101'>A(1)</td>
+                <td class='others rs p289110'>Aramona</td>
+                <td class='others rs p289111'>0122(1)</td>
+                <td rowspan=2 class='attr'>代词(pron.)</td>
+                <td class='desc'>RS原有词汇，以前仅限于宾格，现在主宾格都是这个，绝大多数场合都用Aramona指代“我”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='others rs p289100'>Yamasa</td>
+                <td class='others rs p289101'>Y(1)</td>
+                <td class='others rs p289110'>Yamasa</td>
+                <td class='others rs p289111'>1011-11(1)</td>
+                <td class='desc'>RS原有词汇，现多用于语气极强烈的场合，只能做主语</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='num'>2</td>
+                <td class='zh_CN'>你</td>
+                <td class='others p1033'>you</td>
+                <td class='others rs p289100'>Bakuda</td>
+                <td class='others rs p289101'>B(1)</td>
+                <td class='others rs p289110'>Bakuda</td>
+                <td class='others rs p289111'>1000(1)</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>RS原有词汇，主宾格都是</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>3</td>
+                <td class='zh_CN'>他</td>
+                <td class='others p1033'>he</td>
+                <td class='others rs p289100'>Kareh</td>
+                <td class='others rs p289101'>K(1)</td>
+                <td class='others rs p289110'>Kareh</td>
+                <td class='others rs p289111'>1012(1)</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>她-&gt;Kareneh 它-&gt;Aeto</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>4</td>
+                <td class='zh_CN'>我们</td>
+                <td class='others p1033'>we</td>
+                <td class='others rs p289100'>Aramona</td>
+                <td class='others rs p289101'>A(10)</td>
+                <td class='others rs p289110'>Aramona</td>
+                <td class='others rs p289111'>0122(10)</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>用作主语时加Moh</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>5</td>
+                <td class='zh_CN'>你们</td>
+                <td class='others p1033'>you</td>
+                <td class='others rs p289100'>Bakuda</td>
+                <td class='others rs p289101'>B(10)</td>
+                <td class='others rs p289110'>Bakuda</td>
+                <td class='others rs p289111'>1000(10)</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>用作主语时加Moh</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>6</td>
+                <td class='zh_CN'>他们</td>
+                <td class='others p1033'>they</td>
+                <td class='others rs p289100'>Kareh</td>
+                <td class='others rs p289101'>K(10)</td>
+                <td class='others rs p289110'>Kareh</td>
+                <td class='others rs p289111'>1012(10)</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>用作主语时加Moh</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>7</td>
+                <td class='zh_CN'>这</td>
+                <td class='others p1033'>this</td>
+                <td class='others rs p289100'>Kareh</td>
+                <td class='others rs p289101'>K[1]</td>
+                <td class='others rs p289110'>Kareh</td>
+                <td class='others rs p289111'>1012[1]</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>RS原有词，修饰主语，后置</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>8</td>
+                <td class='zh_CN'>那</td>
+                <td class='others p1033'>that</td>
+                <td class='others rs p289100'>Kareneh</td>
+                <td class='others rs p289101'>R[1]</td>
+                <td class='others rs p289110'>Kareneh</td>
+                <td class='others rs p289111'>0102[1]</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>RS原有词，修饰主语，后置</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>9</td>
+                <td class='zh_CN'>这里</td>
+                <td class='others p1033'>here</td>
+                <td class='others rs p289100'>Pukoe Kah</td>
+                <td class='others rs p289101'>KP</td>
+                <td class='others rs p289110'>Pukoe Kah</td>
+                <td class='others rs p289111'>1012-0110</td>
+                <td class='attr'>副词(adv.)</td>
+                <td class='desc'>RS原有词，有时也可写为Puku Kareh</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>10</td>
+                <td class='zh_CN'>那里</td>
+                <td class='others p1033'>there</td>
+                <td class='others rs p289100'>Puko Ren</td>
+                <td class='others rs p289101'>RP</td>
+                <td class='others rs p289110'>Puko Ren</td>
+                <td class='others rs p289111'>0102-0110</td>
+                <td class='attr'>副词(adv.)</td>
+                <td class='desc'>RS原有词 ，有时也可写为Puku Kareneh</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td rowspan=2 height=84 class='num'>11</td>
+                <td rowspan=2 class='zh_CN'>谁</td>
+                <td rowspan=2 class='others p1033'>who</td>
+                <td class='others rs p289100'>Sabang Sequrah</td>
+                <td class='others rs p289101'>Qbg.</td>
+                <td class='others rs p289110'>Sabang Sequrah</td>
+                <td class='others rs p289111'>1101-1000-110</td>
+                <td rowspan=2 class='attr'>代词(pron.)</td>
+                <td class='desc'>RS原有词（“什么人”之类的必须用Sabang Sequrah)</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='others rs p289100'>Sabah</td>
+                <td class='others rs p289101'>Sbh.</td>
+                <td class='others rs p289110'>Sabah</td>
+                <td class='others rs p289111'>0002-1000-0000</td>
+                <td class='desc'>RS原有词，为前者的缩略词，往往用于非正式场合</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>12</td>
+                <td class='zh_CN'>什么</td>
+                <td class='others p1033'>what</td>
+                <td class='others rs p289100'>Sabang</td>
+                <td class='others rs p289101'>Sbg.</td>
+                <td class='others rs p289110'>Sabang</td>
+                <td class='others rs p289111'>0002-1000-110</td>
+                <td class='attr'>代词(pron.)</td>
+                <td class='desc'>RS原有词，并作为多数疑问词的词根</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>13</td>
+                <td class='zh_CN'>哪</td>
+                <td class='others p1033'>where</td>
+                <td class='others rs p289100'>Puku Sabah</td>
+                <td class='others rs p289101'>SP</td>
+                <td class='others rs p289110'>Puku Sabah</td>
+                <td class='others rs p289111'>0002-0110</td>
+                <td class='attr'>副词(adv.)</td>
+                <td class='desc'>RS原有词，有时缩写为Puku'ah</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td rowspan=2 height=126 class='num'>14</td>
+                <td rowspan=2 class='zh_CN'>何时</td>
+                <td rowspan=2 class='others p1033'>when</td>
+                <td class='others rs p289100'>Sabakan</td>
+                <td class='others rs p289101'>Sbn.</td>
+                <td class='others rs p289110'>Saba『間』</td>
+                <td class='others rs p289111'>0002-1000-10</td>
+                <td rowspan=2 class='attr'>副词(adv.)</td>
+                <td class='desc'>RS原有词，为后者的缩略词，口语及多数书面语往往用Sabakan</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='others rs p289100'>Sabang Saekan</td>
+                <td class='others rs p289101'>Sb.Kn</td>
+                <td class='others rs p289110'>Sabang 時間</td>
+                <td class='others rs p289111'>0002-1000<span>&nbsp; </span>| 1012-10</td>
+                <td class='desc'>RS原有词，伴有亚洲转写成分，其中Saekan对应汉字&quot;時間&quot;</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>15</td>
+                <td class='zh_CN'>如何</td>
+                <td class='others p1033'>how</td>
+                <td class='others rs p289100'>Sabak</td>
+                <td class='others rs p289101'>Sbk.</td>
+                <td class='others rs p289110'>Sabak</td>
+                <td class='others rs p289111'>0002-1000-101</td>
+                <td class='attr'>副词(adv.)</td>
+                <td class='desc'>RS原有词，有时也可写为Sabang Hak</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>16</td>
+                <td class='zh_CN'>不</td>
+                <td class='others p1033'>not</td>
+                <td class='others rs p289100'>Navo</td>
+                <td class='others rs p289101'>N</td>
+                <td class='others rs p289110'>Navo</td>
+                <td class='others rs p289111'>1022</td>
+                <td class='attr'>副词(adv.)</td>
+                <td class='desc'>RS原有词，作祈使句时往往加Kasha'r</td>
+            </tr>
+            <tr height=147 style='height:110.25pt'>
+                <td height=147 class='num'>17</td>
+                <td class='zh_CN'>所有</td>
+                <td class='others p1033'>all</td>
+                <td class='others rs p289100'>Natseng Ahng</td>
+                <td class='others rs p289101'>ATN</td>
+                <td class='others rs p289110'>蘭青紅</td>
+                <td class='others rs p289111'>0122-1222-1022</td>
+                <td class='attr'>限定词(det.)</td>
+                <td class='desc'>RS亚洲转写词，由汉字“蓝”、“青”和“红”的闽南语读音变化而成，红绿蓝也是光学三原色，这3种颜色随着其叠加比例的不同，也会产生不同的色彩。所以该短语也表示“各种各样的”等含义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>18</td>
+                <td class='zh_CN'>多</td>
+                <td class='others p1033'>many</td>
+                <td class='others rs p289100'>Doh</td>
+                <td class='others rs p289101'>Do.</td>
+                <td class='others rs p289110'>多</td>
+                <td class='others rs p289111'>1002-111</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;多&quot;，由其客家话（四会）读音而来</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>19</td>
+                <td class='zh_CN'>一些</td>
+                <td class='others p1033'>some</td>
+                <td class='others rs p289100'>Suh</td>
+                <td class='others rs p289101'>Su.</td>
+                <td class='others rs p289110'>Suh</td>
+                <td class='others rs p289111'>0002-001</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS混合词，由Doh和Seue结合而成，表“一些”“任意”等义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>20</td>
+                <td class='zh_CN'>少</td>
+                <td class='others p1033'>few</td>
+                <td class='others rs p289100'>Seue</td>
+                <td class='others rs p289101'>Sw.</td>
+                <td class='others rs p289110'>少</td>
+                <td class='others rs p289111'>0002-011</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;少&quot;，由其客家话（四会）读音而来</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>21</td>
+                <td class='zh_CN'>其他</td>
+                <td class='others p1033'>other</td>
+                <td class='others rs p289100'>Odurem Tekin/OT</td>
+                <td class='others rs p289101'>OT</td>
+                <td class='others rs p289110'>Odurem Tekin/OT</td>
+                <td class='others rs p289111'>1112-1222</td>
+                <td class='attr'>形容词(adj.),代词(pron.)</td>
+                <td class='desc'>RS原有词，多见于书面语</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=3 height=63 class='num'>22</td>
+                <td rowspan=3 class='zh_CN'>一</td>
+                <td rowspan=3 class='others p1033'>one</td>
+                <td class='others rs p289100'>Weon</td>
+                <td rowspan=3 class='others rs p289101'>1</td>
+                <td class='others rs p289110'>Weon</td>
+                <td class='others rs p289111'>[0001]</td>
+                <td rowspan=3 class='attr'>数词(num.)</td>
+                <td class='desc'>基数词，1</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Rya</td>
+                <td class='others rs p289110'>壹</td>
+                <td class='others rs p289111'>(0001)</td>
+                <td class='desc'>减数词，1</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Satu</td>
+                <td class='others rs p289110'>甲</td>
+                <td class='others rs p289111'>&lt;0001&gt;</td>
+                <td class='desc'>马来数词，1</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=3 height=63 class='num'>23</td>
+                <td rowspan=3 class='zh_CN'>二</td>
+                <td rowspan=3 class='others p1033'>two</td>
+                <td class='others rs p289100'>Teoh</td>
+                <td rowspan=3 class='others rs p289101'>2</td>
+                <td class='others rs p289110'>Teoh</td>
+                <td class='others rs p289111'>[0010]</td>
+                <td rowspan=3 class='attr'>数词(num.)</td>
+                <td class='desc'>基数词，2</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Juk</td>
+                <td class='others rs p289110'>貳</td>
+                <td class='others rs p289111'>(0010)</td>
+                <td class='desc'>减数词，2</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Dua</td>
+                <td class='others rs p289110'>乙</td>
+                <td class='others rs p289111'>&lt;0010&gt;</td>
+                <td class='desc'>马来数词，2</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=3 height=63 class='num'>24</td>
+                <td rowspan=3 class='zh_CN'>三</td>
+                <td rowspan=3 class='others p1033'>three</td>
+                <td class='others rs p289100'>Tsae</td>
+                <td rowspan=3 class='others rs p289101'>3</td>
+                <td class='others rs p289110'>Tsae</td>
+                <td class='others rs p289111'>[0011]</td>
+                <td rowspan=3 class='attr'>数词(num.)</td>
+                <td class='desc'>基数词，3</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Sap</td>
+                <td class='others rs p289110'>叁</td>
+                <td class='others rs p289111'>(0011)</td>
+                <td class='desc'>减数词，3</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Tiga</td>
+                <td class='others rs p289110'>丙</td>
+                <td class='others rs p289111'>&lt;0011&gt;</td>
+                <td class='desc'>马来数词，3</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=3 height=63 class='num'>25</td>
+                <td rowspan=3 class='zh_CN'>四</td>
+                <td rowspan=3 class='others p1033'>four</td>
+                <td class='others rs p289100'>Phatoh</td>
+                <td rowspan=3 class='others rs p289101'>4</td>
+                <td class='others rs p289110'>Phatoh</td>
+                <td class='others rs p289111'>[0100]</td>
+                <td rowspan=3 class='attr'>数词(num.)</td>
+                <td class='desc'>基数词，4</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Pak</td>
+                <td class='others rs p289110'>肆</td>
+                <td class='others rs p289111'>(0100)</td>
+                <td class='desc'>减数词，4</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Empat</td>
+                <td class='others rs p289110'>丁</td>
+                <td class='others rs p289111'>&lt;0100&gt;</td>
+                <td class='desc'>马来数词，4</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=3 height=63 class='num'>26</td>
+                <td rowspan=3 class='zh_CN'>五</td>
+                <td rowspan=3 class='others p1033'>five</td>
+                <td class='others rs p289100'>Pheveh</td>
+                <td rowspan=3 class='others rs p289101'>5</td>
+                <td class='others rs p289110'>Pheveh</td>
+                <td class='others rs p289111'>[0101]</td>
+                <td rowspan=3 class='attr'>数词(num.)</td>
+                <td class='desc'>基数词，5</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Pheoi</td>
+                <td class='others rs p289110'>伍</td>
+                <td class='others rs p289111'>(0101)</td>
+                <td class='desc'>减数词，5</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Lima</td>
+                <td class='others rs p289110'>戊</td>
+                <td class='others rs p289111'>&lt;0101&gt;</td>
+                <td class='desc'>马来数词，5</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>27</td>
+                <td class='zh_CN'>大</td>
+                <td class='others p1033'>big</td>
+                <td class='others rs p289100'>Daeh</td>
+                <td class='others rs p289101'>D</td>
+                <td class='others rs p289110'>大</td>
+                <td class='others rs p289111'>1002</td>
+                <td class='attr'>形容词(adj.),副词(adv.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;大&quot;，与Sara(小)相对，也可表“整体”等含义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>28</td>
+                <td class='zh_CN'>长</td>
+                <td class='others p1033'>long</td>
+                <td class='others rs p289100'>Nagah</td>
+                <td class='others rs p289101'>Nh.</td>
+                <td class='others rs p289110'>長</td>
+                <td class='others rs p289111'>{1022-0000}</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应日语汉字&quot;長（なが）&quot;，与Nagayon(長頭)相对，表“长”等含义</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>29</td>
+                <td class='zh_CN'>宽</td>
+                <td class='others p1033'>wide</td>
+                <td class='others rs p289100'>Khong</td>
+                <td class='others rs p289101'>K</td>
+                <td class='others rs p289110'>寬</td>
+                <td class='others rs p289111'>1012</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;宽&quot;，与Chak(窄)相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>30</td>
+                <td class='zh_CN'>厚</td>
+                <td class='others p1033'>thick</td>
+                <td class='others rs p289100'>Heuh</td>
+                <td class='others rs p289101'>Hu</td>
+                <td class='others rs p289110'>厚</td>
+                <td class='others rs p289111'>0000-001</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;厚&quot;，与Pah(薄)相对</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>31</td>
+                <td class='zh_CN'>重</td>
+                <td class='others p1033'>heavy</td>
+                <td class='others rs p289100'>Tshung</td>
+                <td class='others rs p289101'>T</td>
+                <td class='others rs p289110'>腫</td>
+                <td class='others rs p289111'>1222</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>
+                    RS亚洲转写词，对应汉字&quot;重&quot;，与Chyeong(轻)相对，往往表“笨重”“外强中干”等义
+                </td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>32</td>
+                <td class='zh_CN'>小</td>
+                <td class='others p1033'>small</td>
+                <td class='others rs p289100'>Sara</td>
+                <td class='others rs p289101'>S</td>
+                <td class='others rs p289110'>小</td>
+                <td class='others rs p289111'>0002</td>
+                <td class='attr'>形容词(adj.),副词(adv.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;小&quot;，与Daeh(大)相对，也可表“局部”等含义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>33</td>
+                <td class='zh_CN'>短</td>
+                <td class='others p1033'>short</td>
+                <td class='others rs p289100'>Nagayon</td>
+                <td class='others rs p289101'>Nyn.</td>
+                <td class='others rs p289110'>長頭</td>
+                <td class='others rs p289111'>{1022-0000-10}</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;長頭&quot;，与Nagah(長)相对，表“长”等含义</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>34</td>
+                <td class='zh_CN'>窄</td>
+                <td class='others p1033'>narrow</td>
+                <td class='others rs p289100'>Chak</td>
+                <td class='others rs p289101'>Kc.</td>
+                <td class='others rs p289110'>砦</td>
+                <td class='others rs p289111'>1012-1010</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;窄&quot;，与Khong(宽)相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>35</td>
+                <td class='zh_CN'>薄</td>
+                <td class='others p1033'>thin</td>
+                <td class='others rs p289100'>Pah</td>
+                <td class='others rs p289101'>P</td>
+                <td class='others rs p289110'>薄</td>
+                <td class='others rs p289111'>0110</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;薄&quot;，与Heuh(厚)相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>36</td>
+                <td class='zh_CN'>女</td>
+                <td class='others p1033'>woman</td>
+                <td class='others rs p289100'>Seteman Kyo</td>
+                <td class='others rs p289101'>SK</td>
+                <td class='others rs p289110'>Seteman Kyo</td>
+                <td class='others rs p289111'>0002-1012</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS原有词，与Setisa相对，亦有很多衍生词组</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>37</td>
+                <td class='zh_CN'>男</td>
+                <td class='others p1033'>man</td>
+                <td class='others rs p289100'>Setisa</td>
+                <td class='others rs p289101'>SI</td>
+                <td class='others rs p289110'>Setisa</td>
+                <td class='others rs p289111'>0002-0022</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS原有词，与Seteman Kyo相对，亦有很多衍生词组</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=2 height=42 class='num'>38</td>
+                <td rowspan=2 class='zh_CN'>人</td>
+                <td class='others p1033'>Man</td>
+                <td rowspan=2 class='others rs p289100'>Sequrah, Sequa
+                </td>
+                <td rowspan=2 class='others rs p289101'>Sq</td>
+                <td rowspan=2 class='others rs p289110'>Sequrah, Sequa</td>
+                <td rowspan=2 class='others rs p289111'>0002-1101</td>
+                <td rowspan=2 class='attr'>名词(n.)</td>
+                <td rowspan=2 class='desc'>绝大多数情况都用Sequrah，且Sequrah也指代“人民（的）”，有些场合也用Sequa指代人</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others p1033'>person</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>39</td>
+                <td class='zh_CN'>孩</td>
+                <td class='others p1033'>child</td>
+                <td class='others rs p289100'>Chah Kom/CK</td>
+                <td class='others rs p289101'>CK</td>
+                <td class='others rs p289110'>子供</td>
+                <td class='others rs p289111'>1010-1012</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字词“子供“，由日语“子供（こども）”变化，也可指心智不成熟的人</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>40</td>
+                <td class='zh_CN'>妻</td>
+                <td class='others p1033'>wife</td>
+                <td class='others rs p289100'>Aqua</td>
+                <td class='others rs p289101'>A</td>
+                <td class='others rs p289110'>Aqua</td>
+                <td class='others rs p289111'>0122</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS原有词，与Sequa相对</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>41</td>
+                <td class='zh_CN'>夫</td>
+                <td class='others p1033'>husband</td>
+                <td class='others rs p289100'>Sequa</td>
+                <td class='others rs p289101'>Q</td>
+                <td class='others rs p289110'>Sequa</td>
+                <td class='others rs p289111'>1101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS原有词，与Aqua相对</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>42</td>
+                <td class='zh_CN'>母</td>
+                <td class='others p1033'>mother</td>
+                <td class='others rs p289100'>Mokua</td>
+                <td class='others rs p289101'>MK</td>
+                <td class='others rs p289110'>Mokua</td>
+                <td class='others rs p289111'>1122-1012</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，全称为Mok Aqua，表示生理学、伦理学等的“母亲”，也可以表示集合的母关系（例：某公司的母公司）</td>
+            </tr>
+            <tr height=105 style='height:78.75pt'>
+                <td height=105 class='num'>43</td>
+                <td class='zh_CN'>父</td>
+                <td class='others p1033'>father</td>
+                <td class='others rs p289100'>Pemua</td>
+                <td class='others rs p289101'>PMK</td>
+                <td class='others rs p289110'>Pemua</td>
+                <td class='others rs p289111'>0110-1122-1012</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，全称为Pehi Sequa，表示生理学、伦理学等的“父亲”，也可以表示集合的父关系（例：JS语言中，某DOM元素的父元素）
+                </td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>44</td>
+                <td class='zh_CN'>动物</td>
+                <td class='others p1033'>animal</td>
+                <td class='others rs p289100'>Kata Seung/KS</td>
+                <td class='others rs p289101'>KS</td>
+                <td class='others rs p289110'>卡達 生</td>
+                <td class='others rs p289111'>1012-0002</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，其中Seung对应汉字“生”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>45</td>
+                <td class='zh_CN'>鱼</td>
+                <td class='others p1033'>fish</td>
+                <td class='others rs p289100'>Qah</td>
+                <td class='others rs p289101'>Qah</td>
+                <td class='others rs p289110'>Qah</td>
+                <td class='others rs p289111'>
+                    1101-01-0000
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，由越南语的“cá”变化而来</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>46</td>
+                <td class='zh_CN'>鸟</td>
+                <td class='others p1033'>bird</td>
+                <td class='others rs p289100'>Qam</td>
+                <td class='others rs p289101'>Qam</td>
+                <td class='others rs p289110'>
+                    Qam
+                </td>
+                <td class='others rs p289111'>
+                    1101-01-11
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，由越南语的“chim”变化而来</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>47</td>
+                <td class='zh_CN'>狗</td>
+                <td class='others p1033'>dog</td>
+                <td class='others rs p289100'>
+                    Kenoh
+                </td>
+                <td class='others rs p289101'>Ko.</td>
+                <td class='others rs p289110'>
+                    Kenoh
+                </td>
+                <td class='others rs p289111'>
+                    1012-111
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>
+                    RS混合词，由日语的”いぬ(犬)”和韩语的&quot;&#44060;&quot;的读音结合而来
+                </td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>48</td>
+                <td class='zh_CN'>虱</td>
+                <td class='others p1033'>louse</td>
+                <td class='others rs p289100'>Sye</td>
+                <td class='p289101'>Sye</td>
+                <td class='others rs p289110'>虱</td>
+                <td class='others rs p289111'>
+                    0002-1011-0
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“虱”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>49</td>
+                <td class='zh_CN'>蛇</td>
+                <td class='others p1033'>snake</td>
+                <td class='others rs p289100'>
+                    Saek
+                </td>
+                <td class='others rs p289101'>Xk.</td>
+                <td class='others rs p289110'>蛇</td>
+                <td class='others rs p289111'>
+                    1001-101
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“蛇”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>50</td>
+                <td class='zh_CN'>虫</td>
+                <td class='others p1033'>worm</td>
+                <td class='others rs p289100'>
+                    Qom
+                </td>
+                <td class='p289101'>Qom</td>
+                <td class='others rs p289110'>虫</td>
+                <td class='others rs p289111'>
+                    1101-111-11
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“虫”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>51</td>
+                <td class='zh_CN'>树</td>
+                <td class='others p1033'>tree</td>
+                <td class='others rs p289100'>Seberti</td>
+                <td class='others rs p289101'>St.</td>
+                <td class='others rs p289110'>Seberti</td>
+                <td class='others rs p289111'>{0002-1}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS原有词，还表示（类似于）树状结构的事物</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>52</td>
+                <td class='zh_CN'>森</td>
+                <td class='others p1033'>forest</td>
+                <td class='others rs p289100'>Sebsete</td>
+                <td class='others rs p289101'>Ste.</td>
+                <td class='others rs p289110'>Sebsete</td>
+                <td class='others rs p289111'>{0002-1-0}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，可展开为Seberti Clasete，直译为“树的集合”</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>53</td>
+                <td class='zh_CN'>枝</td>
+                <td class='others p1033'>stick</td>
+                <td class='others rs p289100'>Seboh</td>
+                <td class='others rs p289101'>Bh.</td>
+                <td class='others rs p289110'>Seboh</td>
+                <td class='others rs p289111'>{1000-0000}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>
+                    RS混合词，全称为Seberti Phoh，表示树的枝杈等，也可以表示公司的分公司、某个组织的分部等
+                </td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>54</td>
+                <td class='zh_CN'>果</td>
+                <td class='others p1033'>fruit</td>
+                <td class='others rs p289100'>Guh</td>
+                <td class='others rs p289101'>Gu.</td>
+                <td class='others rs p289110'>果</td>
+                <td class='others rs p289111'>1102-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“果”，可以表示某植物结的果实，也可以表示事情的结果、别人的劳动成果等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>55</td>
+                <td class='zh_CN'>种</td>
+                <td class='others p1033'>seed</td>
+                <td class='others rs p289100'>Chung</td>
+                <td class='others rs p289101'>Cng.</td>
+                <td class='others rs p289110'>种</td>
+                <td class='others rs p289111'>1010-10-110</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“种”，而且Chung也对应汉字“中”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>56</td>
+                <td class='zh_CN'>叶</td>
+                <td class='others p1033'>leaf</td>
+                <td class='others rs p289100'>Jheh</td>
+                <td class='others rs p289101'>Je.</td>
+                <td class='others rs p289110'>葉</td>
+                <td class='others rs p289111'>{0111-0}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“叶”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>57</td>
+                <td class='zh_CN'>根</td>
+                <td class='others p1033'>root</td>
+                <td class='others rs p289100'>Kom</td>
+                <td class='others rs p289101'>Ku.</td>
+                <td class='others rs p289110'>根</td>
+                <td class='others rs p289111'>1012-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“根”</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>58</td>
+                <td class='zh_CN'>树皮</td>
+                <td class='others p1033'>bark</td>
+                <td class='others rs p289100'>Sekai</td>
+                <td class='others rs p289101'>Ks.</td>
+                <td class='others rs p289110'>Sekai</td>
+                <td class='others rs p289111'>1012-000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，全称为Ghai Seberti，表示树的“外（皮）”，也可以表示其他物品的外皮，外包装等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>59</td>
+                <td class='zh_CN'>花</td>
+                <td class='others p1033'>flower</td>
+                <td class='others rs p289100'>Hana</td>
+                <td class='others rs p289101'>Hn.</td>
+                <td class='others rs p289110'>花</td>
+                <td class='others rs p289111'>0000-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“花”的日语读音（はな）</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>60</td>
+                <td class='zh_CN'>草</td>
+                <td class='others p1033'>grass</td>
+                <td class='others rs p289100'>Kusa</td>
+                <td class='others rs p289101'>Qs.</td>
+                <td class='others rs p289110'>草</td>
+                <td class='others rs p289111'>
+                    1101-000
+                </td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“草”的日语读音（くさ）</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>61</td>
+                <td class='zh_CN'>绳</td>
+                <td class='others p1033'>rope</td>
+                <td class='others rs p289100'>
+                    Shaen
+                </td>
+                <td class='others rs p289101'>Shn.</td>
+                <td class='others rs p289110'>繩</td>
+                <td class='others rs p289111'>0002-0000-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“繩”，表示绳子或是其他线型物体</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>62</td>
+                <td class='zh_CN'>肤</td>
+                <td class='others p1033'>skin</td>
+                <td class='others rs p289100'>
+                    Huk
+                </td>
+                <td class='others rs p289101'>Fk.</td>
+                <td class='others rs p289110'>肤</td>
+                <td class='others rs p289111'>0010-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“肤”，可表示动物的皮肤，也可表示种子的种皮、程序的UI、其他物体的表面等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>63</td>
+                <td class='zh_CN'>肉</td>
+                <td class='others p1033'>meat</td>
+                <td class='others rs p289100'>
+                    Nekum
+                </td>
+                <td class='others rs p289101'>Nk.</td>
+                <td class='others rs p289110'>肉</td>
+                <td class='others rs p289111'>1022-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，由汉字“肉”的日语读音（にく）演变而来</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>64</td>
+                <td class='zh_CN'>血</td>
+                <td class='others p1033'>blood</td>
+                <td class='others rs p289100'>Sek</td>
+                <td class='others rs p289101'>Sek</td>
+                <td class='others rs p289110'>血</td>
+                <td class='others rs p289111'>0002-0-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;血&quot;，可表示动物的血液，也可表示植物的汁液、树脂等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>65</td>
+                <td class='zh_CN'>骨</td>
+                <td class='others p1033'>bone</td>
+                <td class='others rs p289100'>
+                    Kuh
+                </td>
+                <td class='others rs p289101'>Kuh</td>
+                <td class='others rs p289110'>骨</td>
+                <td class='others rs p289111'>1012-001-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;骨&quot;，表示动物的骨骼，也可以表示房屋等物品的骨架等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>66</td>
+                <td class='zh_CN'>脂</td>
+                <td class='others p1033'>fat</td>
+                <td class='others rs p289100'>
+                    Chaeh
+                </td>
+                <td class='others rs p289101'>Qa.</td>
+                <td class='others rs p289110'>脂</td>
+                <td class='others rs p289111'>1101-01</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;脂&quot;，表示动物、植物的油脂，也可表示（化妆用的）脂粉等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>67</td>
+                <td class='zh_CN'>蛋</td>
+                <td class='others p1033'>egg</td>
+                <td class='others rs p289100'>Tehn / Ten</td>
+                <td class='others rs p289101'>Ten</td>
+                <td class='others rs p289110'>蛋</td>
+                <td class='others rs p289111'>1222-0-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;蛋&quot;，表示某些动物的蛋，植物的种子，也可表示其他一些东西</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>68</td>
+                <td class='zh_CN'>角</td>
+                <td class='others p1033'>horn</td>
+                <td class='others rs p289100'>
+                    Ch'au
+                </td>
+                <td class='others rs p289101'>Cu.</td>
+                <td class='others rs p289110'>角</td>
+                <td class='others rs p289111'>1010-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;角&quot;，表示数学的角，某些动物的犄角，也可表示...的角度</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>69</td>
+                <td class='zh_CN'>尾</td>
+                <td class='others p1033'>tail</td>
+                <td class='others rs p289100'>
+                    Keh
+                </td>
+                <td class='others rs p289101'>Keh</td>
+                <td class='others rs p289110'>尾</td>
+                <td class='others rs p289111'>1012-0-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;尾&quot;，与Rya(伊)相对，表示某些动物的尾巴、其他一些物体的尾部等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>70</td>
+                <td class='zh_CN'>羽</td>
+                <td class='others p1033'>feather</td>
+                <td class='others rs p289100'>
+                    Jok
+                </td>
+                <td class='others rs p289101'>Jok</td>
+                <td class='others rs p289110'>羽</td>
+                <td class='others rs p289111'>0111-111-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;羽&quot;，表示某些动物的羽毛、鬃毛，恶势力的党羽等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>71</td>
+                <td class='zh_CN'>发</td>
+                <td class='others p1033'>hair</td>
+                <td class='others rs p289100'>Foi</td>
+                <td class='others rs p289101'>Fe.</td>
+                <td class='others rs p289110'>発</td>
+                <td class='others rs p289111'>0010-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应日语汉字“発(はつ)”</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>72</td>
+                <td class='zh_CN'>头</td>
+                <td class='others p1033'>head</td>
+                <td class='others rs p289100'>Rya</td>
+                <td class='others rs p289101'>Ra.</td>
+                <td class='others rs p289110'>伊</td>
+                <td class='others rs p289111'>0102-01</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“壹”，是减数词的1，也可表示某些物体的头部等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>73</td>
+                <td class='zh_CN'>耳</td>
+                <td class='others p1033'>ear</td>
+                <td class='others rs p289100'>Ngah / Nah</td>
+                <td class='others rs p289101'>Nah</td>
+                <td class='others rs p289110'>耳</td>
+                <td class='others rs p289111'>1022-01-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;耳&quot;，表示某些动物的耳朵</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>74</td>
+                <td class='zh_CN'>眼</td>
+                <td class='others p1033'>eye</td>
+                <td class='others rs p289100'>Aeng / Ang</td>
+                <td class='others rs p289101'>Ang.</td>
+                <td class='others rs p289110'>眼</td>
+                <td class='others rs p289111'>0122-10-110</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;眼&quot;，表示某些动物的眼睛</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>75</td>
+                <td class='zh_CN'>鼻</td>
+                <td class='others p1033'>nose</td>
+                <td class='others rs p289100'>
+                    Buk
+                </td>
+                <td class='others rs p289101'>Buk</td>
+                <td class='others rs p289110'>鼻</td>
+                <td class='others rs p289111'>1000-001-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;鼻&quot;，表示动物的鼻子等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>76</td>
+                <td class='zh_CN'>口</td>
+                <td class='others p1033'>mouth</td>
+                <td class='others rs p289100'>
+                    Ch'oi
+                </td>
+                <td class='others rs p289101'>Qoi</td>
+                <td class='others rs p289110'>口</td>
+                <td class='others rs p289111'>1101-111-00</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;口&quot;，表示某些动物的嘴巴、鸟类的喙、某些物体的开口等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>77</td>
+                <td class='zh_CN'>牙</td>
+                <td class='others p1033'>tooth</td>
+                <td class='others rs p289100'>
+                    Jah
+                </td>
+                <td class='others rs p289101'>Jah</td>
+                <td class='others rs p289110'>牙</td>
+                <td class='others rs p289111'>0111-01-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;牙&quot;，表示某些动物的牙齿等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>78</td>
+                <td class='zh_CN'>舌</td>
+                <td class='others p1033'>tongue</td>
+                <td class='others rs p289100'>
+                    Syek
+                </td>
+                <td class='others rs p289101'>Syk.</td>
+                <td class='others rs p289110'>舌</td>
+                <td class='others rs p289111'>0002-1011-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;舌&quot;，表示某些动物的舌头等</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>79</td>
+                <td class='zh_CN'>指甲</td>
+                <td class='others p1033'>fingernail</td>
+                <td class='others rs p289100'>Ch'ah Cuk</td>
+                <td class='others rs p289101'>CC</td>
+                <td class='others rs p289110'>甲指 / CC</td>
+                <td class='others rs p289111'>1010-1010</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;甲指&quot;，其中：甲-&gt;Ch'ah，指-&gt;Cuk，表示某些动物的指甲、角质层等</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>80</td>
+                <td class='zh_CN'>脚</td>
+                <td class='others p1033'>foot</td>
+                <td class='others rs p289100'>
+                    Kah
+                </td>
+                <td class='others rs p289101'>Kah</td>
+                <td class='others rs p289110'>腳</td>
+                <td class='others rs p289111'>1012-01-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;腳&quot;，表示某些动物的足部、脚爪等，其他一些物体的支架（底部）等（不适用汉字）</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>81</td>
+                <td class='zh_CN'>腿</td>
+                <td class='others p1033'>leg</td>
+                <td class='others rs p289100'>Teue / Tue</td>
+                <td class='others rs p289101'>Teu</td>
+                <td class='others rs p289110'>腿</td>
+                <td class='others rs p289111'>1222-0-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;腿&quot;，表示某些动物的腿部，其他一些物体的支架（中间部分）等（不适用汉字）。</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>82</td>
+                <td class='zh_CN'>膝</td>
+                <td class='others p1033'>knee</td>
+                <td class='others rs p289100'>Syeh</td>
+                <td class='others rs p289101'>Xe</td>
+                <td class='others rs p289110'>膝</td>
+                <td class='others rs p289111'>1001-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;膝&quot;，表示某些动物的膝盖等一些关节部位，其他一些物体的转轴等（不适用汉字）</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>83</td>
+                <td class='zh_CN'>手</td>
+                <td class='others p1033'>hand</td>
+                <td class='others rs p289100'>
+                    Syeuh
+                </td>
+                <td class='others rs p289101'>Seu.</td>
+                <td class='others rs p289110'>手</td>
+                <td class='others rs p289111'>0002-0-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;手&quot;，表示某些动物的手、爪子等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>84</td>
+                <td class='zh_CN'>翅</td>
+                <td class='others p1033'>wing</td>
+                <td class='others rs p289100'>
+                    Ch'ieh
+                </td>
+                <td class='others rs p289101'>Qeh</td>
+                <td class='others rs p289110'>翅</td>
+                <td class='others rs p289111'>1101-0-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;翅&quot;，表示某些动物的翅膀等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>85</td>
+                <td class='zh_CN'>腹</td>
+                <td class='others p1033'>belly</td>
+                <td class='others rs p289100'>
+                    Heuh
+                </td>
+                <td class='others rs p289101'>Heu</td>
+                <td class='others rs p289110'>腹</td>
+                <td class='others rs p289111'>0000-0-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;腹&quot;，表示某些动物的腹部等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>86</td>
+                <td class='zh_CN'>肠</td>
+                <td class='others p1033'>guts</td>
+                <td class='others rs p289100'>
+                    Q'ung
+                </td>
+                <td class='others rs p289101'>Qon</td>
+                <td class='others rs p289110'>腸</td>
+                <td class='others rs p289111'>1101-111-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;腸&quot;，表示某些动物的大肠、小肠，（食品）火腿肠，管道等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>87</td>
+                <td class='zh_CN'>颈</td>
+                <td class='others p1033'>neck</td>
+                <td class='others rs p289100'>
+                    Ch'aen
+                </td>
+                <td class='others rs p289101'>Qan</td>
+                <td class='others rs p289110'>頸</td>
+                <td class='others rs p289111'>1101-01-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;頸&quot;，表示某些动物的脖子、其他一些物体的颈部等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>88</td>
+                <td class='zh_CN'>背</td>
+                <td class='others p1033'>back</td>
+                <td class='others rs p289100'>
+                    Bak
+                </td>
+                <td class='others rs p289101'>Bak</td>
+                <td class='others rs p289110'>背</td>
+                <td class='others rs p289111'>1000-01-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;背&quot;，表示一些动物的背部，其他一些物体的背部等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>89</td>
+                <td class='zh_CN'>乳</td>
+                <td class='others p1033'>breast</td>
+                <td class='others rs p289100'>Reon</td>
+                <td class='others rs p289101'>Ron</td>
+                <td class='others rs p289110'>乳</td>
+                <td class='others rs p289111'>0102-111-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;乳&quot;，表示一些动物的乳房等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>90</td>
+                <td class='zh_CN'>心</td>
+                <td class='others p1033'>heart</td>
+                <td class='others rs p289100'>Syun</td>
+                <td class='others rs p289101'>So.</td>
+                <td class='others rs p289110'>心</td>
+                <td class='others rs p289111'>0002-111</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应“心”等汉字，也可写为Syeon</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>91</td>
+                <td class='zh_CN'>肝</td>
+                <td class='others p1033'>liver</td>
+                <td class='others rs p289100'>Kahn</td>
+                <td class='others rs p289101'>Kn.&lt;My.C&gt;</td>
+                <td class='others rs p289110'>肝</td>
+                <td class='others rs p289111'>[1012-10]</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应“肝”等汉字，也可写为Khan</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>92</td>
+                <td class='zh_CN'>喝</td>
+                <td class='others p1033'>to drink</td>
+                <td class='others rs p289100'>Heuh</td>
+                <td class='others rs p289101'>Uh.</td>
+                <td class='others rs p289110'>喝</td>
+                <td class='others rs p289111'>0012-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“喝”等，也表“饮品”等义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>93</td>
+                <td class='zh_CN'>吃</td>
+                <td class='others p1033'>to eat</td>
+                <td class='others rs p289100'>Cheoi</td>
+                <td class='others rs p289101'>Qo.</td>
+                <td class='others rs p289110'>喫</td>
+                <td class='others rs p289111'>1101-111</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“食”、“吃”等，表示某些动物进食的动作等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>94</td>
+                <td class='zh_CN'>咬</td>
+                <td class='others p1033'>to bite</td>
+                <td class='others rs p289100'>Gah</td>
+                <td class='others rs p289101'>Gah</td>
+                <td class='others rs p289110'>咬</td>
+                <td class='others rs p289111'>1102-01-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;咬&quot;，表示一些动物撕咬某物体的动作等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>95</td>
+                <td class='zh_CN'>吸</td>
+                <td class='others p1033'>to suck</td>
+                <td class='others rs p289100'>Soh</td>
+                <td class='others rs p289101'>Soh</td>
+                <td class='others rs p289110'>吸</td>
+                <td class='others rs p289111'>0002-111-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;吸&quot;，表示一些动物吸食的动作，以及吸水等其他一些现象</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>96</td>
+                <td class='zh_CN'>吐</td>
+                <td class='others p1033'>to spit</td>
+                <td class='others rs p289100'>Tue</td>
+                <td class='others rs p289101'>Tue</td>
+                <td class='others rs p289110'>吐</td>
+                <td class='others rs p289111'>1222-001-0</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;吐&quot;，表示某些动物吐出某物，货物的吞吐操作等（偏义副词）</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>97</td>
+                <td class='zh_CN'>呕</td>
+                <td class='others p1033'>to vomit</td>
+                <td class='others rs p289100'>Tseh</td>
+                <td class='others rs p289101'>Ceh</td>
+                <td class='others rs p289110'>嘔</td>
+                <td class='others rs p289111'>1010-0-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;吐&quot;，表示某些动物的呕吐动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>98</td>
+                <td class='zh_CN'>吹</td>
+                <td class='others p1033'>to blow</td>
+                <td class='others rs p289100'>Qoh</td>
+                <td class='others rs p289101'>Qoh</td>
+                <td class='others rs p289110'>吹</td>
+                <td class='others rs p289111'>1101-111-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;吹&quot;，表示“吹气”、“吹牛“等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>99</td>
+                <td class='zh_CN'>呼吸</td>
+                <td class='others p1033'>to breathe</td>
+                <td class='others rs p289100'>Hoi Sak</td>
+                <td class='others rs p289101'>HS</td>
+                <td class='others rs p289110'>呼吸 / HS</td>
+                <td class='others rs p289111'>0000-0002</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“呼吸”，其中，呼-&gt;Hoi，吸-&gt;Sak，表示某些动物的呼吸动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>100</td>
+                <td class='zh_CN'>笑</td>
+                <td class='others p1033'>to laugh</td>
+                <td class='others rs p289100'>Tsah</td>
+                <td class='others rs p289101'>Cah</td>
+                <td class='others rs p289110'>笑</td>
+                <td class='others rs p289111'>1010-01-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“笑”，表示微笑、苦笑等各种笑的动作，也表示搞笑的事物</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>101</td>
+                <td class='zh_CN'>看</td>
+                <td class='others p1033'>to see</td>
+                <td class='others rs p289100'>Taeh</td>
+                <td class='others rs p289101'>Th.</td>
+                <td class='others rs p289110'>睇</td>
+                <td class='others rs p289111'>1222-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“睇”的粤语读音，有英语的see和look的用法</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>102</td>
+                <td class='zh_CN'>听</td>
+                <td class='others p1033'>to hear</td>
+                <td class='others rs p289100'>Saituni Noh</td>
+                <td class='others rs p289101'>SN</td>
+                <td class='others rs p289110'>SN</td>
+                <td class='others rs p289111'>0002-1022</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词组，全称Saituni Noh，源自“说”——Saituni，表示“倾听”、“听到”等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>103</td>
+                <td class='zh_CN'>知</td>
+                <td class='others p1033'>to know</td>
+                <td class='others rs p289100'>Chih</td>
+                <td class='others rs p289101'>Qi</td>
+                <td class='others rs p289110'>知</td>
+                <td class='others rs p289111'>1101-00</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;知&quot;，表示感知某种事物的状态</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>104</td>
+                <td class='zh_CN'>想</td>
+                <td class='others p1033'>to think</td>
+                <td class='others rs p289100'>Hsun</td>
+                <td class='others rs p289101'>Xon</td>
+                <td class='others rs p289110'>想</td>
+                <td class='others rs p289111'>1001-111-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“想”，表示“想象”、“想起”等动作，也可指人的思想等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>105</td>
+                <td class='zh_CN'>嗅</td>
+                <td class='others p1033'>to smell</td>
+                <td class='others rs p289100'>Hsoh<span>&nbsp;</span></td>
+                <td class='others rs p289101'>Xoh</td>
+                <td class='others rs p289110'>嗅</td>
+                <td class='others rs p289111'>1001-111-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“嗅”，表示嗅、嗅探等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td rowspan=2 height=84 class='num'>106</td>
+                <td rowspan=2 class='zh_CN'>怕</td>
+                <td rowspan=2 class='others p1033'>to fear</td>
+                <td class='others rs p289100'>Bah</td>
+                <td class='others rs p289101'>Ba.</td>
+                <td class='others rs p289110'>垻</td>
+                <td class='others rs p289111'>1000-01</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“垻“，表示某些可怕的事物</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='others rs p289100'>Fueh</td>
+                <td class='others rs p289101'>Fh</td>
+                <td class='others rs p289110'>Fueh</td>
+                <td class='others rs p289111'>0010-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS原有词，表示害怕、恐惧的情绪、言行等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>107</td>
+                <td class='zh_CN'>睡</td>
+                <td class='others p1033'>to sleep</td>
+                <td class='others rs p289100'>Teh Jhap</td>
+                <td class='others rs p289101'>JT</td>
+                <td class='others rs p289110'>扎台</td>
+                <td class='others rs p289111'>0111-1222</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“扎台“，表示“扎”在“寢台”上</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>108</td>
+                <td class='zh_CN'>住</td>
+                <td class='others p1033'>to live</td>
+                <td class='others rs p289100'>Jépung</td>
+                <td class='others rs p289101'>PJ</td>
+                <td class='others rs p289110'>扎本</td>
+                <td class='others rs p289111'>0110-0111</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“扎本“，表示“扎根”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>109</td>
+                <td class='zh_CN'>死</td>
+                <td class='others p1033'>to die</td>
+                <td class='others rs p289100'>Saeh</td>
+                <td class='others rs p289101'>X.</td>
+                <td class='others rs p289110'>死</td>
+                <td class='others rs p289111'>1001</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“死“，也可指不可改变的事物</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>110</td>
+                <td class='zh_CN'>杀</td>
+                <td class='others p1033'>to kill</td>
+                <td class='others rs p289100'>Saetuk</td>
+                <td class='others rs p289101'>Xt.</td>
+                <td class='others rs p289110'>死度</td>
+                <td class='others rs p289111'>1001-1</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词，可展开为Saeh Setuk，其中Saeh对应汉字—&quot;死&quot;</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>111</td>
+                <td class='zh_CN'>斗</td>
+                <td class='others p1033'>to fight</td>
+                <td class='others rs p289100'>Phung Chap(§)</td>
+                <td class='others rs p289101'>Pm.C</td>
+                <td class='others rs p289110'>分界</td>
+                <td class='others rs p289111'>0110-11 | 1010<span>&nbsp;</span></td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字词“分(Phung)节(Chep)”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>112</td>
+                <td class='zh_CN'>猎</td>
+                <td class='others p1033'>to hunt</td>
+                <td class='others rs p289100'>Qop</td>
+                <td class='others rs p289101'>Qop</td>
+                <td class='others rs p289110'>猎</td>
+                <td class='others rs p289111'>1101-111-0110</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;猎&quot;，表示捕猎、猎取等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>113</td>
+                <td class='zh_CN'>击</td>
+                <td class='others p1033'>to hit</td>
+                <td class='others rs p289100'>Phung</td>
+                <td class='others rs p289101'>Pum</td>
+                <td class='others rs p289110'>呯</td>
+                <td class='others rs p289111'>0110-001-11</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;呯&quot;，表示打击等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>114</td>
+                <td class='zh_CN'>切</td>
+                <td class='others p1033'>to cut</td>
+                <td class='others rs p289100'>Q'eh</td>
+                <td class='others rs p289101'>Qh</td>
+                <td class='others rs p289110'>切</td>
+                <td class='others rs p289111'>1101-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;切&quot;，表示切割某物体等动作，也可表示物体某处被割破、割伤</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>115</td>
+                <td class='zh_CN'>分</td>
+                <td class='others p1033'>to split</td>
+                <td class='others rs p289100'>Bung</td>
+                <td class='others rs p289101'>Bon</td>
+                <td class='others rs p289110'>分</td>
+                <td class='others rs p289111'>1000-111-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;分&quot;，表示分类、分别等动作，也可表示“分钟”、“分数”等含义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>116</td>
+                <td class='zh_CN'>刺</td>
+                <td class='others p1033'>to stab</td>
+                <td class='others rs p289100'>Ch'ah</td>
+                <td class='others rs p289101'>Q'a</td>
+                <td class='others rs p289110'>刺</td>
+                <td class='others rs p289111'>1101+01</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;刺&quot;，表示刺等动作，也可表示某物被刺破、刺伤等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>117</td>
+                <td class='zh_CN'>挠</td>
+                <td class='others p1033'>to scratch</td>
+                <td class='others rs p289100'>Nguh</td>
+                <td class='others rs p289101'>Nu.</td>
+                <td class='others rs p289110'>挠</td>
+                <td class='others rs p289111'>1022-001</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;挠&quot;，表示挠痒痒等动作，也可表示挠背勺等物体</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>118</td>
+                <td class='zh_CN'>挖</td>
+                <td class='others p1033'>to dig</td>
+                <td class='others rs p289100'>Kwak</td>
+                <td class='others rs p289101'>Ka.</td>
+                <td class='others rs p289110'>挖</td>
+                <td class='others rs p289111'>1012-01</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;挖&quot;，表示挖掘、挖矿等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>119</td>
+                <td class='zh_CN'>游</td>
+                <td class='others p1033'>to swim</td>
+                <td class='others rs p289100'>Sojong</td>
+                <td class='others rs p289101'>Sj.</td>
+                <td class='others rs p289110'>水泳</td>
+                <td class='others rs p289111'>0002-0111</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应韩语单词“&#49688;&#50689;(水泳)”，表示游泳运动</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>120</td>
+                <td class='zh_CN'>飞</td>
+                <td class='others p1033'>to fly</td>
+                <td class='others rs p289100'>Fueh</td>
+                <td class='others rs p289101'>Hf.</td>
+                <td class='others rs p289110'>飛</td>
+                <td class='others rs p289111'>0000-0010</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;飛&quot;，表示飞翔等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>121</td>
+                <td class='zh_CN'>走</td>
+                <td class='others p1033'>to walk</td>
+                <td class='others rs p289100'>Cuk</td>
+                <td class='others rs p289101'>Cuk</td>
+                <td class='others rs p289110'>驅</td>
+                <td class='others rs p289111'>1010-001-101</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;驅&quot;，表示往前走、离开等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>122</td>
+                <td class='zh_CN'>来</td>
+                <td class='others p1033'>to come</td>
+                <td class='others rs p289100'>Cukai</td>
+                <td class='others rs p289101'>Cki.</td>
+                <td class='others rs p289110'>來</td>
+                <td class='others rs p289111'>1010-101-00</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，全称为Cuk Rhae（驅來），表“到来”等义，简称“Rhae(來)&quot;</td>
+            </tr>
+            <tr height=42 style='height:32.1pt'>
+                <td rowspan=2 height=84 class='num'>123</td>
+                <td rowspan=2 class='zh_CN'>躺</td>
+                <td class='others p1033'>to lie down<span>&nbsp;</span></td>
+                <td class='others rs p289100'>Thong</td>
+                <td class='others rs p289101'>Ton</td>
+                <td rowspan=2 class='others rs p289110'>躺</td>
+                <td class='others rs p289111'>1222-111-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td rowspan=2 class='desc'>RS亚洲转写词， 对应汉字&quot;躺&quot;，前者表示“躺下”，后者就表示“躺”，在名词方面，二者都可以表示“躺椅”等物体
+                </td>
+            </tr>
+            <tr height=42 style='height:32.1pt'>
+                <td height=42 class='others p1033'>to lie</td>
+                <td class='others rs p289100'>Thun</td>
+                <td class='others rs p289101'>Tun</td>
+                <td class='others rs p289111'>1222-001-10</td>
+                <td class='attr'>动词(v.)</td>
+            </tr>
+            <tr height=42 style='height:32.1pt'>
+                <td rowspan=2 height=84 class='num'>124</td>
+                <td rowspan=2 class='zh_CN'>坐</td>
+                <td class='others p1033'>to sit down<span>&nbsp;</span></td>
+                <td class='others rs p289100'>Suhn</td>
+                <td class='others rs p289101'>Sun.</td>
+                <td rowspan=2 class='others rs p289110'>坐</td>
+                <td class='others rs p289111'>0002-001-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td rowspan=2 class='desc'>RS亚洲转写词， 对应汉字&quot;坐&quot;，前者表示“坐下”，后者就表示“坐”，在名词方面，二者都可以表示“坐椅”、“座位”等物体
+                </td>
+            </tr>
+            <tr height=42 style='height:32.1pt'>
+                <td height=42 class='others p1033'>to sit</td>
+                <td class='others rs p289100'>Sui</td>
+                <td class='others rs p289101'>Sui</td>
+                <td class='others rs p289111'>0002-001-00</td>
+                <td class='attr'>动词(v.)</td>
+            </tr>
+            <tr height=42 style='height:32.1pt'>
+                <td rowspan=2 height=84 class='num'>125</td>
+                <td rowspan=2 class='zh_CN'>站</td>
+                <td class='others p1033'>to stand up<span>&nbsp;</span></td>
+                <td class='others rs p289100'>Chuhng</td>
+                <td class='others rs p289101'>Qun</td>
+                <td rowspan=2 class='others rs p289110'>站</td>
+                <td class='others rs p289111'>1101-001-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td rowspan=2 class='desc'>RS亚洲转写词， 对应汉字&quot;站&quot;，前者表示“站起来”，后者就表示“站”，在名词方面，二者都可以表示“站位”等事物
+                </td>
+            </tr>
+            <tr height=42 style='height:32.1pt'>
+                <td height=42 class='others p1033'>to stand</td>
+                <td class='others rs p289100'>Choh</td>
+                <td class='others rs p289101'>Q'o</td>
+                <td class='others rs p289111'>1101+111</td>
+                <td class='attr'>动词(v.)</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>126</td>
+                <td class='zh_CN'>转</td>
+                <td class='others p1033'>to turn</td>
+                <td class='others rs p289100'>Jheong</td>
+                <td class='others rs p289101'>Jun</td>
+                <td class='others rs p289110'>轉</td>
+                <td class='others rs p289111'>0111-001-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;轉&quot;，表示“旋转”、“转身”等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>127</td>
+                <td class='zh_CN'>落</td>
+                <td class='others p1033'>to fall</td>
+                <td class='others rs p289100'>Rhong</td>
+                <td class='others rs p289101'>Ro.</td>
+                <td class='others rs p289110'>落</td>
+                <td class='others rs p289111'>0102-111</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;落&quot;，表示“掉落”等动作，也可表示某些物体的下落等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>128</td>
+                <td class='zh_CN'>给</td>
+                <td class='others p1033'>to give</td>
+                <td class='others rs p289100'>Kusato</td>
+                <td class='others rs p289101'>Kst.</td>
+                <td class='others rs p289110'>給</td>
+                <td class='others rs p289111'>1012-000-1</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词，由修饰词缀Kusa和 Tohara组成，表示“给予”、“提供”、“借出”等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>129</td>
+                <td class='zh_CN'>拿</td>
+                <td class='others p1033'>to hold</td>
+                <td class='others rs p289100'>
+                    Kusaba
+                </td>
+                <td class='others rs p289101'>Ksb.</td>
+                <td class='others rs p289110'>Ksb.</td>
+                <td class='others rs p289111'>1012-000-1000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词，由修饰词缀Kusa和 Bathak组成，表示“拿”、“获取”、”购买“等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>130</td>
+                <td class='zh_CN'>挤</td>
+                <td class='others p1033'>to squeeze</td>
+                <td class='others rs p289100'>Qih</td>
+                <td class='others rs p289101'>Qih</td>
+                <td class='others rs p289110'>挤</td>
+                <td class='others rs p289111'>1101-00-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;挤&quot;，表示挤压、挤占等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>131</td>
+                <td class='zh_CN'>磨</td>
+                <td class='others p1033'>to rub</td>
+                <td class='others rs p289100'>Mhung</td>
+                <td class='others rs p289101'>Mun.</td>
+                <td class='others rs p289110'>磨</td>
+                <td class='others rs p289111'>1122-001-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;磨&quot;，表示“打磨“等动作，也可表示“磨子”、“磨刀石”等物体</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>132</td>
+                <td class='zh_CN'>洗</td>
+                <td class='others p1033'>to wash</td>
+                <td class='others rs p289100'>
+                    Sueh
+                </td>
+                <td class='others rs p289101'>Sue.</td>
+                <td class='others rs p289110'>洗</td>
+                <td class='others rs p289111'>0002-001-0</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;洗&quot;，表示“清洗”、“盥洗”等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>133</td>
+                <td class='zh_CN'>擦</td>
+                <td class='others p1033'>to wipe</td>
+                <td class='others rs p289100'>
+                    Tshah
+                </td>
+                <td class='others rs p289101'>Za.</td>
+                <td class='others rs p289110'>擦</td>
+                <td class='others rs p289111'>1100-01</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;擦&quot;，表示“擦除”等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>134</td>
+                <td class='zh_CN'>拉</td>
+                <td class='others p1033'>to pull</td>
+                <td class='others rs p289100'>
+                    Kusano
+                </td>
+                <td class='others rs p289101'>Ksn.</td>
+                <td class='others rs p289110'>Ksn.</td>
+                <td class='others rs p289111'>1012-000-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词，由修饰词缀Kusa和 Noh组成，表示“拉”等动作</td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>135</td>
+                <td class='zh_CN'>推</td>
+                <td class='others p1033'>to push</td>
+                <td class='others rs p289100'>Guato</td>
+                <td class='others rs p289101'>Gt.</td>
+                <td class='others rs p289110'>Gt.</td>
+                <td class='others rs p289111'>1102-1</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词，由修饰词缀Kua和 Tohara组成，表示“推”等动作，也可表示“加速”、“减速”等义，具体意思由上下文决定</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>136</td>
+                <td class='zh_CN'>扔</td>
+                <td class='others p1033'>to throw</td>
+                <td class='others rs p289100'>
+                    Nakyah
+                </td>
+                <td class='others rs p289101'>Nkh.</td>
+                <td class='others rs p289110'>Nkh.</td>
+                <td class='others rs p289111'>1022-101-0000</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS原有词，由Nagayon变化而来，表示“剪断”、“抛弃”、“扔”、“清理”、“删除”等动作</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>137</td>
+                <td class='zh_CN'>系</td>
+                <td class='others p1033'>to tie</td>
+                <td class='others rs p289100'>Syong</td>
+                <td class='others rs p289101'>Son.</td>
+                <td class='others rs p289110'>系</td>
+                <td class='others rs p289111'>0002-111-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词， 对应汉字&quot;系&quot;，表示系鞋带等动作</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>138</td>
+                <td class='zh_CN'>缝</td>
+                <td class='others p1033'>to sew</td>
+                <td class='others rs p289100'>
+                    Pung
+                </td>
+                <td class='others rs p289101'>Pon.</td>
+                <td class='others rs p289110'>縫</td>
+                <td class='others rs p289111'>0110-111-10</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字”縫“，表示缝纫等动作，也可表示缝纫机等物品</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>139</td>
+                <td class='zh_CN'>计</td>
+                <td class='others p1033'>to count</td>
+                <td class='others rs p289100'>Suta</td>
+                <td class='others rs p289101'>Sta.</td>
+                <td class='others rs p289110'>計</td>
+                <td class='others rs p289111'>0002-1-01</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“計”，表示“计算”、“计较”等动作，也可表示尺子等计量工具</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td rowspan=2 height=63 class='num'>140</td>
+                <td rowspan=2 class='zh_CN'>说</td>
+                <td rowspan=2 class='others p1033'>to say</td>
+                <td class='others rs p289100'>Saito</td>
+                <td class='others rs p289101'>Sto.</td>
+                <td class='others rs p289110'>Saito</td>
+                <td class='others rs p289111'>0002-1-111</td>
+                <td rowspan=2 class='attr'>动词(v.)</td>
+                <td class='desc'>RS原有词，不及物动词，经常加修饰成分</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>Saituni</td>
+                <td class='others rs p289101'>Stn.</td>
+                <td class='others rs p289110'>Saituni</td>
+                <td class='others rs p289111'>0002-1-10</td>
+                <td class='desc'>RS原有词，及物动词</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>141</td>
+                <td class='zh_CN'>唱</td>
+                <td class='others p1033'>to sing</td>
+                <td class='others rs p289100'>
+                    Kajah
+                </td>
+                <td class='others rs p289101'>
+                    Kj.
+                </td>
+                <td class='others rs p289110'>
+                    Kajah
+                </td>
+                <td class='others rs p289111'>
+                    1012-0111
+                </td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，由日语“カラオケ(Karaoke)”变化而来</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>142</td>
+                <td class='zh_CN'>玩</td>
+                <td class='others p1033'>to play</td>
+                <td class='others rs p289100'>
+                    Rum
+                </td>
+                <td class='others rs p289101'>Jm.</td>
+                <td class='others rs p289110'>
+                    Rum
+                </td>
+                <td class='others rs p289111'>
+                    0111-11
+                </td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS原有词，意为&quot;玩耍&quot;</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>143</td>
+                <td class='zh_CN'>浮</td>
+                <td class='others p1033'>to float</td>
+                <td class='others rs p289100'>Hok</td>
+                <td class='others rs p289101'>Fo.</td>
+                <td class='others rs p289110'>浮</td>
+                <td class='others rs p289111'>0010-111</td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;浮&quot;</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>144</td>
+                <td class='zh_CN'>流</td>
+                <td class='others p1033'>to flow</td>
+                <td class='others rs p289100'>Rhau</td>
+                <td class='others rs p289101'>Lo.</td>
+                <td class='others rs p289110'>流</td>
+                <td class='others rs p289111'>
+                    0100-111
+                </td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;流&quot;</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>145</td>
+                <td class='zh_CN'>冻</td>
+                <td class='others p1033'>to freeze</td>
+                <td class='others rs p289100'>Paentuk</td>
+                <td class='others rs p289101'>
+                    Ptk.
+                </td>
+                <td class='others rs p289110'>冰度</td>
+                <td class='others rs p289111'>
+                    0110-1-101
+                </td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS混合词，由两个汉字词Paen(冰)和Setuk(現度)结合而成，全称为Paen Setuk</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>146</td>
+                <td class='zh_CN'>肿</td>
+                <td class='others p1033'>to swell</td>
+                <td class='others rs p289100'>Chung</td>
+                <td class='others rs p289101'>Qng.</td>
+                <td class='others rs p289110'>腫</td>
+                <td class='others rs p289111'>
+                    1110-10-110
+                </td>
+                <td class='attr'>动词(v.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“腫”，还对应“中”等汉字</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>147</td>
+                <td class='zh_CN'>日</td>
+                <td class='others p1033'>sun</td>
+                <td class='others rs p289100'>Ryat</td>
+                <td class='others rs p289101'>Rt.</td>
+                <td class='others rs p289110'>日</td>
+                <td class='others rs p289111'>0102-1</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“日”，有时也可写作Rya或Ria等，还可表示星期日</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>148</td>
+                <td class='zh_CN'>月</td>
+                <td class='others p1033'>moon</td>
+                <td class='others rs p289100'>Jeh</td>
+                <td class='others rs p289101'>Jh.</td>
+                <td class='others rs p289110'>月</td>
+                <td class='others rs p289111'>0111-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“月”，有时也可写作Jheh，还可表示星期一</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>149</td>
+                <td class='zh_CN'>星</td>
+                <td class='others p1033'>star</td>
+                <td class='others rs p289100'>Sung</td>
+                <td class='others rs p289101'>Sn.</td>
+                <td class='others rs p289110'>星</td>
+                <td class='others rs p289111'>0002-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“星”的韩语读音，还对应“商”等汉字</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>150</td>
+                <td class='zh_CN'>水</td>
+                <td class='others p1033'>water</td>
+                <td class='others rs p289100'>Sai</td>
+                <td class='others rs p289101'>Si.</td>
+                <td class='others rs p289110'>水</td>
+                <td class='others rs p289111'>0002-00</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“水”,还可表示星期三</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>151</td>
+                <td class='zh_CN'>雨</td>
+                <td class='others p1033'>rain</td>
+                <td class='others rs p289100'>Sayok</td>
+                <td class='others rs p289101'>Sok.</td>
+                <td class='others rs p289110'>雨</td>
+                <td class='others rs p289111'>0002-111-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，可展开为Sai Jok，其中Sai对应汉字“水”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>152</td>
+                <td class='zh_CN'>河</td>
+                <td class='others p1033'>river</td>
+                <td class='others rs p289100'>Heoh</td>
+                <td class='others rs p289101'>He.</td>
+                <td class='others rs p289110'>河</td>
+                <td class='others rs p289111'>0000-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“河”、&quot;浩“等，多用于地名</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>153</td>
+                <td class='zh_CN'>湖</td>
+                <td class='others p1033'>lake</td>
+                <td class='others rs p289100'>Heueh</td>
+                <td class='others rs p289101'>Heh.</td>
+                <td class='others rs p289110'>湖</td>
+                <td class='others rs p289111'>0000-0-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“湖&quot;,也可写成Heue等</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>154</td>
+                <td class='zh_CN'>海</td>
+                <td class='others p1033'>sea</td>
+                <td class='others rs p289100'>Bathak</td>
+                <td class='others rs p289101'>Btk.</td>
+                <td class='others rs p289110'>Bathak</td>
+                <td class='others rs p289111'>1000-1-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>
+                    RS亚洲转写词，由韩文的“&#48148;&#45796;(Bada)&quot;变化而来
+                </td>
+            </tr>
+            <tr height=84 style='height:63.0pt'>
+                <td height=84 class='num'>155</td>
+                <td class='zh_CN'>盐</td>
+                <td class='others p1033'>salt</td>
+                <td class='others rs p289100'>Batsoe</td>
+                <td class='others rs p289101'>Bte.</td>
+                <td class='others rs p289110'>Batsoe</td>
+                <td class='others rs p289111'>1000-1-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，全称为Bathak Cheoi. Bathak由韩文的“&#48148;&#45796;(Bada)&quot;变化而来，而Cheoi对应汉字“食”
+                </td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>156</td>
+                <td class='zh_CN'>石</td>
+                <td class='others p1033'>stone</td>
+                <td class='others rs p289100'>Sae(h)</td>
+                <td class='others rs p289101'>Se.</td>
+                <td class='others rs p289110'>石</td>
+                <td class='others rs p289111'>0002-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“石”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>157</td>
+                <td class='zh_CN'>沙</td>
+                <td class='others p1033'>sand</td>
+                <td class='others rs p289100'>Tsa</td>
+                <td class='others rs p289101'>Ca.</td>
+                <td class='others rs p289110'>沙</td>
+                <td class='others rs p289111'>1010-01</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“沙”</td>
+            </tr>
+            <tr height=126 style='height:94.5pt'>
+                <td height=126 class='num'>158</td>
+                <td class='zh_CN'>尘</td>
+                <td class='others p1033'>dust</td>
+                <td class='others rs p289100'>Batabak</td>
+                <td class='others rs p289101'>Btc.</td>
+                <td class='others rs p289110'>Batabak</td>
+                <td class='others rs p289111'>1000-1-1010</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，全称为Bathak Bak，顾名思义就是金钱的大海，该词多用于文学作品，往往表示“金钱如粪土，不能代表幸福，没什么了不起的”，也表示一般的尘埃
+                </td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>159</td>
+                <td class='zh_CN'>地</td>
+                <td class='others p1033'>earth</td>
+                <td class='others rs p289100'>Chae</td>
+                <td class='others rs p289101'>Ch.</td>
+                <td class='others rs p289110'>地</td>
+                <td class='others rs p289111'>1010-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“地”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>160</td>
+                <td class='zh_CN'>云</td>
+                <td class='others p1033'>cloud</td>
+                <td class='others rs p289100'>Eung</td>
+                <td class='others rs p289101'>Em.</td>
+                <td class='others rs p289110'>云</td>
+                <td class='others rs p289111'>0222-11</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，大致对应韩语中“云”的读音，也对应汉字“云”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>161</td>
+                <td class='zh_CN'>雾</td>
+                <td class='others p1033'>fog</td>
+                <td class='others rs p289100'>Chung Sang</td>
+                <td class='others rs p289101'>CS</td>
+                <td class='others rs p289110'>鐘雲</td>
+                <td class='others rs p289111'>1010-0002</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>
+                    Sai Chung Eung
+                </td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>162</td>
+                <td class='zh_CN'>天</td>
+                <td class='others p1033'>sky</td>
+                <td class='others rs p289100'>Taen</td>
+                <td class='others rs p289101'>Te.</td>
+                <td class='others rs p289110'>天</td>
+                <td class='others rs p289111'>1222-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“天”，还可表顶峰等意</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>163</td>
+                <td class='zh_CN'>风</td>
+                <td class='others p1033'>wind</td>
+                <td class='others rs p289100'>Foong</td>
+                <td class='others rs p289101'>Fn.</td>
+                <td class='others rs p289110'>風</td>
+                <td class='others rs p289111'>0010-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“风”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>164</td>
+                <td class='zh_CN'>雪</td>
+                <td class='others p1033'>snow</td>
+                <td class='others rs p289100'>Sai Chung Paen</td>
+                <td class='others rs p289101'>Sp.</td>
+                <td class='others rs p289110'>中水</td>
+                <td class='others rs p289111'>[0002-0110]</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>Sai Chung Paen</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>165</td>
+                <td class='zh_CN'>冰</td>
+                <td class='others p1033'>ice</td>
+                <td class='others rs p289100'>Paen</td>
+                <td class='others rs p289101'>Pn.</td>
+                <td class='others rs p289110'>冰</td>
+                <td class='others rs p289111'>0110-10</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“冰”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>166</td>
+                <td class='zh_CN'>烟</td>
+                <td class='others p1033'>smoke</td>
+                <td class='others rs p289100'>Ahn</td>
+                <td class='others rs p289101'>Am.</td>
+                <td class='others rs p289110'>煙</td>
+                <td class='others rs p289111'>0122-11</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“烟”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>167</td>
+                <td class='zh_CN'>火</td>
+                <td class='others p1033'>fire</td>
+                <td class='others rs p289100'>Koh</td>
+                <td class='others rs p289101'>Kh.</td>
+                <td class='others rs p289110'>火</td>
+                <td class='others rs p289111'>1012-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“火”,还可表示星期二</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>168</td>
+                <td class='zh_CN'>灰</td>
+                <td class='others p1033'>ashes</td>
+                <td class='others rs p289100'>Heoe</td>
+                <td class='others rs p289101'>Ho.</td>
+                <td class='others rs p289110'>灰</td>
+                <td class='others rs p289111'>0000-111</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——“灰”，也可写成Heu等，还可以表示灰颜色</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>169</td>
+                <td class='zh_CN'>烧</td>
+                <td class='others p1033'>to burn</td>
+                <td class='others rs p289100'>Kotuk</td>
+                <td class='others rs p289101'>Kt.</td>
+                <td class='others rs p289110'>火度</td>
+                <td class='others rs p289111'>1012-1</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS混合词，可展开为Koh Setuk，其中Koh对应汉字&quot;火&quot;</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>170</td>
+                <td class='zh_CN'>路</td>
+                <td class='others p1033'>road</td>
+                <td class='others rs p289100'>Rok/Rk.</td>
+                <td class='others rs p289101'>Rk.</td>
+                <td class='others rs p289110'>路</td>
+                <td class='others rs p289111'>{0112-101}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“路”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>171</td>
+                <td class='zh_CN'>山</td>
+                <td class='others p1033'>mountain</td>
+                <td class='others rs p289100'>Sam</td>
+                <td class='others rs p289101'>Sm.</td>
+                <td class='others rs p289110'>山</td>
+                <td class='others rs p289111'>0002-11</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“山”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>172</td>
+                <td class='zh_CN'>红</td>
+                <td class='others p1033'>red</td>
+                <td class='others rs p289100'>Ahng</td>
+                <td class='others rs p289101'>An.</td>
+                <td class='others rs p289110'>紅</td>
+                <td class='others rs p289111'>{0122-10}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应闽南语中“红”的读音，也对应汉字“红”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>173</td>
+                <td class='zh_CN'>绿</td>
+                <td class='others p1033'>green</td>
+                <td class='others rs p289100'>Tsheng</td>
+                <td class='others rs p289101'>Tn.</td>
+                <td class='others rs p289110'>青</td>
+                <td class='others rs p289111'>{1222-10}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应闽南语中“绿”的读音，也对应汉字“绿”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>174</td>
+                <td class='zh_CN'>黄</td>
+                <td class='others p1033'>yellow</td>
+                <td class='others rs p289100'>Nah</td>
+                <td class='others rs p289101'>Na.</td>
+                <td class='others rs p289110'>蘭</td>
+                <td class='others rs p289111'>{1022-01}</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应闽南语中“蓝”的读音，也对应汉字“蓝”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>175</td>
+                <td class='zh_CN'>白</td>
+                <td class='others p1033'>white</td>
+                <td class='others rs p289100'>Bak</td>
+                <td class='others rs p289101'>Bk.</td>
+                <td class='others rs p289110'>白</td>
+                <td class='others rs p289111'>1000-101</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应韩语中“白”的读音，也对应汉字“白”</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>176</td>
+                <td class='zh_CN'>黑</td>
+                <td class='others p1033'>black</td>
+                <td class='others rs p289100'>Meoe</td>
+                <td class='others rs p289101'>Mu.</td>
+                <td class='others rs p289110'>Meoe</td>
+                <td class='others rs p289111'>1122-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，由韩文“&#44160;&#51008;&#49353;(geo-meun-saek)”中的geo和meun交叉拼写得来</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>177</td>
+                <td class='zh_CN'>夜</td>
+                <td class='others p1033'>night</td>
+                <td class='others rs p289100'>Cheh</td>
+                <td class='others rs p289101'>Ce.</td>
+                <td class='others rs p289110'>夜</td>
+                <td class='others rs p289111'>1010-0</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>
+                    RS亚洲转写词，对应汉字“夜”
+                </td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>178</td>
+                <td class='zh_CN'>昼</td>
+                <td class='others p1033'>day</td>
+                <td class='others rs p289100'>Syah</td>
+                <td class='others rs p289101'>Sa(2)</td>
+                <td class='others rs p289110'>Syah</td>
+                <td class='others rs p289111'>0002-01(2)</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>
+                    RS原有词，与Cheh相对
+                </td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>179</td>
+                <td class='zh_CN'>年</td>
+                <td class='others p1033'>year</td>
+                <td class='others rs p289100'>Nyung</td>
+                <td class='others rs p289101'>Ny.</td>
+                <td class='others rs p289110'>年</td>
+                <td class='others rs p289111'>1022-1011</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，大致对应韩语中“年”的读音，也对应汉字“年”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>180</td>
+                <td class='zh_CN'>暖</td>
+                <td class='others p1033'>warm</td>
+                <td class='others rs p289100'>Konom</td>
+                <td class='others rs p289101'>Km.</td>
+                <td class='others rs p289110'>火喏</td>
+                <td class='others rs p289111'>1012-11</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS混合词，全称为Koh Nohum（火喏），表“温暖”意</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>181</td>
+                <td class='zh_CN'>冷</td>
+                <td class='others p1033'>cold</td>
+                <td class='others rs p289100'>Paenum</td>
+                <td class='others rs p289101'>Pm.</td>
+                <td class='others rs p289110'>冰喏</td>
+                <td class='others rs p289111'>0110-11</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS混合词，全称为Paen Nohum（火喏），表“温暖”意</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>182</td>
+                <td class='zh_CN'>满</td>
+                <td class='others p1033'>full</td>
+                <td class='others rs p289100'>Hachoe</td>
+                <td class='others rs p289101'>Hc.</td>
+                <td class='others rs p289110'>白椎</td>
+                <td class='others rs p289111'>0000-1010</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>
+                    RS亚洲转写词，对应日语中“白”的读音，结合了RS汉字&quot;椎“的读音(Cheoe)
+                </td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>183</td>
+                <td class='zh_CN'>新</td>
+                <td class='others p1033'>new</td>
+                <td class='others rs p289100'>Asah</td>
+                <td class='others rs p289101'>As(1)</td>
+                <td class='others rs p289110'>Asah</td>
+                <td class='others rs p289111'>0122-000(1)</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS原有词，与Kaeh相对</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>184</td>
+                <td class='zh_CN'>旧</td>
+                <td class='others p1033'>old</td>
+                <td class='others rs p289100'>Kaeh</td>
+                <td class='others rs p289101'>Ka(0)</td>
+                <td class='others rs p289110'>Kaeh</td>
+                <td class='others rs p289111'>1012-01(0)</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS原有词，与Aseh相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>185</td>
+                <td class='zh_CN'>好</td>
+                <td class='others p1033'>good</td>
+                <td class='others rs p289100'>Sarahah</td>
+                <td class='others rs p289101'>Srh.</td>
+                <td class='others rs p289110'>Sarahah</td>
+                <td class='others rs p289111'>0002-010-0000</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS原有词，加Aram后表示对人的尊称</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>186</td>
+                <td class='zh_CN'>坏</td>
+                <td class='others p1033'>bad</td>
+                <td class='others rs p289100'>Takah</td>
+                <td class='others rs p289101'>Tk.</td>
+                <td class='others rs p289110'>Takah</td>
+                <td class='others rs p289111'>1222-101</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS原有词，与Sarahah相对</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>187</td>
+                <td class='zh_CN'>腐</td>
+                <td class='others p1033'>rotten</td>
+                <td class='others rs p289100'>Hok</td>
+                <td class='others rs p289101'>Hk.</td>
+                <td class='others rs p289110'>腐</td>
+                <td class='others rs p289111'>0000-101</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“腐”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>188</td>
+                <td class='zh_CN'>脏</td>
+                <td class='others p1033'>dirty</td>
+                <td class='others rs p289100'>Tson</td>
+                <td class='others rs p289101'>Cn.</td>
+                <td class='others rs p289110'>牂</td>
+                <td class='others rs p289111'>1010-10</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“牂”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>189</td>
+                <td class='zh_CN'>直</td>
+                <td class='others p1033'>straight</td>
+                <td class='others rs p289100'>Chih</td>
+                <td class='others rs p289101'>Ci.</td>
+                <td class='others rs p289110'>直</td>
+                <td class='others rs p289111'>1010-00</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“直”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>190</td>
+                <td class='zh_CN'>圆</td>
+                <td class='others p1033'>round</td>
+                <td class='others rs p289100'>Juen</td>
+                <td class='others rs p289101'>Jn.</td>
+                <td class='others rs p289110'>元</td>
+                <td class='others rs p289111'>0111-10</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“元”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>191</td>
+                <td class='zh_CN'>尖</td>
+                <td class='others p1033'>sharp</td>
+                <td class='others rs p289100'>Qyen</td>
+                <td class='others rs p289101'>Qy.</td>
+                <td class='others rs p289110'>尖</td>
+                <td class='others rs p289111'>1101-1011</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字“尖”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=2 height=42 class='num'>192</td>
+                <td rowspan=2 class='zh_CN'>钝</td>
+                <td class='others p1033'>Dull</td>
+                <td rowspan=2 class='others rs p289100'>Tsong</td>
+                <td rowspan=2 class='others rs p289101'>Cm.</td>
+                <td rowspan=2 class='others rs p289110'>墫</td>
+                <td rowspan=2 class='others rs p289111'>1010-11</td>
+                <td rowspan=2 class='attr'>形容词(adj.)</td>
+                <td rowspan=2 class='desc'>RS亚洲转写词，对应汉字“墫”</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others p1033'>blunt</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>193</td>
+                <td class='zh_CN'>滑</td>
+                <td class='others p1033'>smooth</td>
+                <td class='others rs p289100'>Sayen</td>
+                <td class='others rs p289101'>Syn.</td>
+                <td class='others rs p289110'>水石</td>
+                <td class='others rs p289111'>0002-1011-10</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS混合词，全称为Sai Chaeh Syan，对应汉字“水石”——水漫过的石头，更加光滑</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>194</td>
+                <td class='zh_CN'>湿</td>
+                <td class='others p1033'>wet</td>
+                <td class='others rs p289100'>
+                    Syah
+                </td>
+                <td class='others rs p289101'>Sy.</td>
+                <td class='others rs p289110'>濕</td>
+                <td class='others rs p289111'>0002-1011</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS原有词，与Khan(干)相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>195</td>
+                <td class='zh_CN'>干</td>
+                <td class='others p1033'>dry</td>
+                <td class='others rs p289100'>Khan</td>
+                <td class='others rs p289101'>Kn.</td>
+                <td class='others rs p289110'>干</td>
+                <td class='others rs p289111'>1012-10</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应“干” “汗”等汉字</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>196</td>
+                <td class='zh_CN'>对</td>
+                <td class='others p1033'>correct</td>
+                <td class='others rs p289100'>Jesumé</td>
+                <td class='others rs p289101'>J</td>
+                <td class='others rs p289110'>Jesumé</td>
+                <td class='others rs p289111'>{0111}</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS原有词，与Navo相对，常用Yeah代替，有些场合仍会用到</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>197</td>
+                <td class='zh_CN'>近</td>
+                <td class='others p1033'>near</td>
+                <td class='others rs p289100'>Qem, Qeng</td>
+                <td class='others rs p289101'>Qn.</td>
+                <td class='others rs p289110'>近</td>
+                <td class='others rs p289111'>1101-10</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;近&quot;，与Rhung(遠)相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>198</td>
+                <td class='zh_CN'>远</td>
+                <td class='others p1033'>far</td>
+                <td class='others rs p289100'>Rhung</td>
+                <td class='others rs p289101'>Rm.</td>
+                <td class='others rs p289110'>遠</td>
+                <td class='others rs p289111'>0102-11</td>
+                <td class='attr'>形容词(adj.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字&quot;远&quot;，与Qem(近)相对</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>199</td>
+                <td class='zh_CN'>右</td>
+                <td class='others p1033'>right</td>
+                <td class='others rs p289100'>Rok/R</td>
+                <td class='others rs p289101'>Ru.</td>
+                <td class='others rs p289110'>右</td>
+                <td class='others rs p289111'>0102-001</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——&quot;右&quot;，可表示方位、政治等的右</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>200</td>
+                <td class='zh_CN'>左</td>
+                <td class='others p1033'>left</td>
+                <td class='others rs p289100'>Sah/S</td>
+                <td class='others rs p289101'>Ah.</td>
+                <td class='others rs p289110'>左</td>
+                <td class='others rs p289111'>0122-0000</td>
+                <td class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，对应汉字——&quot;左&quot;，可表示方位、政治等的左</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>201</td>
+                <td class='zh_CN'>在</td>
+                <td class='others p1033'>at</td>
+                <td class='others rs p289100'>aetah</td>
+                <td class='others rs p289101'>@</td>
+                <td class='others rs p289110'>aetah</td>
+                <td class='others rs p289111'>@</td>
+                <td class='attr'>介词(pron.)</td>
+                <td class='desc'>RS原有词</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>202</td>
+                <td class='zh_CN'>里</td>
+                <td class='others p1033'>in</td>
+                <td class='others rs p289100'>Induree, IDR</td>
+                <td class='others rs p289101'>IDR</td>
+                <td class='others rs p289110'>Induree, IDR</td>
+                <td class='others rs p289111'>0022-1002-0102</td>
+                <td class='attr'>介词(pron.)</td>
+                <td class='desc'>
+                    RS原有词，并且为RS使用次数最多的介词，与Odura相对
+                </td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td class='num'>203</td>
+                <td class='zh_CN'>与</td>
+                <td class='others p1033'>with</td>
+                <td class='others rs p289100'>onda</td>
+                <td class='others rs p289101'>\</td>
+                <td class='others rs p289110'>onda</td>
+                <td class='others rs p289111'>&amp;</td>
+                <td class='attr'>连词(conj.)</td>
+                <td class='desc'>RS原有词</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td rowspan=3 height=63 class='num'>204</td>
+                <td rowspan=3 class='zh_CN'>和</td>
+                <td rowspan=3 class='others p1033'>and</td>
+                <td class='others rs p289100'>onda</td>
+                <td rowspan=3 class='others rs p289101'>/</td>
+                <td class='others rs p289110'>onda</td>
+                <td rowspan=3 class='others rs p289111'>&amp;&amp;</td>
+                <td rowspan=3 class='attr'>连词(conj.)</td>
+                <td class='desc'>RS原有词，一般语气用这个</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>ondina</td>
+                <td class='others rs p289110'>ondina</td>
+                <td class='desc'>RS原有词，主要用于褒义</td>
+            </tr>
+            <tr height=21 style='height:15.75pt'>
+                <td height=21 class='others rs p289100'>onduna</td>
+                <td class='others rs p289110'>onduna</td>
+                <td class='desc'>RS原有词，主要用于贬义</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='num'>205</td>
+                <td class='zh_CN'>若</td>
+                <td class='others p1033'>if</td>
+                <td class='others rs p289100'>Aku Satori</td>
+                <td class='others rs p289101'>Ak.S</td>
+                <td class='others rs p289110'>Aku Satori</td>
+                <td class='others rs p289111'>[0122-101]{0002}</td>
+                <td class='attr'>连词(conj.)</td>
+                <td class='desc'>RS原有词组，实际上表示“如果...就”，“既然...那么”等义，Aku和Satori在此必须配对出现</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td height=42 class='num'>206</td>
+                <td class='zh_CN'>因</td>
+                <td class='others p1033'>because</td>
+                <td class='others rs p289100'>Yung</td>
+                <td class='others rs p289101'>Ym.</td>
+                <td class='others rs p289110'>印</td>
+                <td class='others rs p289111'>1011-11</td>
+                <td class='attr'>连词(conj.)</td>
+                <td class='desc'>RS亚洲转写词，对应“因” “英”等汉字，用于句尾表“因为”</td>
+            </tr>
+            <tr height=42 style='height:31.5pt'>
+                <td rowspan=2 height=105 class='num'>207</td>
+                <td rowspan=2 class='zh_CN'>名</td>
+                <td rowspan=2 class='others p1033'>name</td>
+                <td class='others rs p289100'>Myung Kuk</td>
+                <td class='others rs p289101'>Mk.</td>
+                <td class='others rs p289110'>名故</td>
+                <td class='others rs p289111'>1122-101</td>
+                <td rowspan=2 class='attr'>名词(n.)</td>
+                <td class='desc'>RS亚洲转写词，表示其他事物的名称等</td>
+            </tr>
+            <tr height=63 style='height:47.25pt'>
+                <td height=63 class='others rs p289100'>Myung Sam</td>
+                <td class='others rs p289101'>Ms.</td>
+                <td class='others rs p289110'>聲名</td>
+                <td class='others rs p289111'>1022-000</td>
+                <td class='desc'>RS亚洲转写词，对应汉字--&quot;姓名&quot;、“名声&quot;等,指代一个人的姓名、名声等</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script>
+    // alert("Sonec Sarahah Tohara Sequrah ATN!");
+    console.log("Sonec Sarahah Tohara Sequrah ATN!\nHere's the Swadesh List of Lenda Sarieh!");
+</script>
+
+</html>
